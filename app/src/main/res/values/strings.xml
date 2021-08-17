@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DSP App</string>
+    <string name="excel_error">"CSV is empty or has an empty line"</string>
+    <string name="upload_success">File upload was sucessful!</string>
+    <string name="title_placeholder">Title</string>
+    <array name ="listimage">
+        <item>@drawable/topic1</item>
+        <item>@drawable/topic2</item>
+        <item>@drawable/topic3</item>
+        <item>@drawable/topic4</item>
+
+    </array>
+</resources>
