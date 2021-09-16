@@ -25,7 +25,7 @@ public class ViewActivity extends AppCompatActivity implements View.OnClickListe
     TextView text_area;
     ScrollView scrollView;
     public Information infodb;
-    public List<Information> mFragments;
+    public List<String> mFragments;
     private Query query;
 
 
@@ -82,11 +82,11 @@ public class ViewActivity extends AppCompatActivity implements View.OnClickListe
                     //int i = 0;
                     // mFragments.clear();
                     for (QueryDocumentSnapshot document : task.getResult()) {
-                        Information ip = document.toObject(Information.class);
-                       // mFragments=ip.getFragments();
+                        Information ip = document.toObject(Information.class); //use getstring
+                        //mFragments.add(ip.getFragments().toString());
 
                         text_area.setText(ip.getFragments().get(0));
-                        scrollView.addView(text_area);
+                        //scrollView.addView(text_area);
 
 
 
@@ -105,7 +105,7 @@ public class ViewActivity extends AppCompatActivity implements View.OnClickListe
         public void onClick (View v){
             switch (v.getId()) {
                 case R.id.next:
-                    //text_area.setText(infodb.getFragments().get(1));
+                    text_area.setText(mFragments.get(1).toString());
                     break;
 
 
